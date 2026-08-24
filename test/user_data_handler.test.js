@@ -63,7 +63,7 @@ describe('UserDataHandler', () => {
       expect(handler.isMatchingAllSearchParams(user, { role: 'admin', id: 1 })).to.equal(true)
     })
 
-    it('Should return true when user matches one search parameter', () => {
+    it('Should return false when user matches no search parameter', () => {
       expect(handler.isMatchingAllSearchParams(user, { name: 'Ani' })).to.equal(false)
     })
   })
@@ -81,9 +81,9 @@ describe('UserDataHandler', () => {
         .to.throw('No users loaded!')
     })
 
-    it('Should throw error saying "No search parameters provoded!" when no search parameter provided', () => {
+    it('Should throw error saying "No search parameters provided!" when no search parameter provided', () => {
       expect(() => handler.findUsers())
-        .to.throw('No search parameters provoded!')
+        .to.throw('No search parameters provided!')
     })
 
     it('Should throw error saying "No matching users found!" when no user matches', () => {

@@ -76,7 +76,7 @@ class UserDataHandler {
    * @memberof UserDataHandler
    */
   findUsers (searchParamsObject) {
-    if (!searchParamsObject) throw new Error('No search parameters provoded!')
+    if (!searchParamsObject) throw new Error('No search parameters provided!')
     if (this.users.length === 0) throw new Error('No users loaded!')
     const matchingUsers = this.users.filter(user => this.isMatchingAllSearchParams(user, searchParamsObject))
     if (matchingUsers.length === 0) throw new Error('No matching users found!')

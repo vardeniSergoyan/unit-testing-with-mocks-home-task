@@ -27,10 +27,10 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "dotenv": "^17.4.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "dotenv": "^17.4.2",
     "chai": "^6.2.2",
     "eslint": "^7.10.0",
     "eslint-config-standard": "^14.1.1",
